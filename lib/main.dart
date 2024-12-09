@@ -41,10 +41,10 @@ class MyApp extends StatelessWidget {
             children: [
               Image.asset('assets/images/computer.jpg'),
               const Text(
-                'ขอบคุณที่ใช้บริการ',
+                'Thank you',
                 style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
               ),
-              const Text('เรายินดีที่ได้เป็นส่วนหนึ่งในการเดินทางของคุณ',
+              const Text('We appreciating for bought items from our shop',
                   style: TextStyle(fontSize: 16)),
 
               // ElevatedButton(
@@ -63,22 +63,58 @@ class MyApp extends StatelessWidget {
                   //   iconSize: 40,
                   // ),
                   Text(
-                    'สรุปรายละเอียการชาร์จ',
+                    'Order Summary',
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
-              const Row(
+              const Column(
                 children: [
-                  Column(
+                  Row(
+                    
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text('test'),
+                      SizedBox(height: 50),
+                      Text(
+                        'Subtotal',
+                        style: TextStyle(fontSize: 20,fontWeight: FontWeight.w300),
+                      ),
+                      Spacer(),
+                      Text(
+                        '1000.00 THB',
+                        style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),
+                      )
                     ],
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [Text('test2')],
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 50),
+                      Text(
+                        'Estimated Shipping',
+                        style: TextStyle(fontSize: 20,fontWeight: FontWeight.w300),
+                      ),
+                      Spacer(),
+                      Text(
+                        '0.00 THB',
+                        style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 50),
+                      Text(
+                        'Estimated Total',
+                        style: TextStyle(fontSize: 20,fontWeight: FontWeight.w300),
+                      ),
+                      Spacer(),
+                      Text(
+                        '1000.00 THB',
+                        style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),
+                      )
+                    ],
                   ),
                 ],
               )
