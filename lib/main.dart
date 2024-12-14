@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
           ),
           body: Column(
             children: [
-              Image.asset('assets/images/computer.jpg'),
+              Image.network('https://cdn.shopify.com/s/files/1/0597/4209/3363/files/jd_FJ9509-001_al_large.jpg?v=1726193826'),
               const Text(
                 'Thank you',
                 style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
@@ -124,7 +124,7 @@ class MyApp extends StatelessWidget {
             onPressed: () {
               debugPrint('fabtest');
             },
-            child: const Icon(Icons.zoom_in),
+            child: const Icon(Icons.shopping_cart),
           ),
         ));
   }
