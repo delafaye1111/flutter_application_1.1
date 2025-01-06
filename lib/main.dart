@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/about_page.dart';
+import 'package:flutter_application_1/display_page.dart';
+import 'package:flutter_application_1/my_theme.dart';
 import 'evcharging_page.dart';
 import 'welcome_page.dart';
 
@@ -15,14 +18,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          appBarTheme:
-              const AppBarTheme(color: Color.fromARGB(255, 38, 39, 95)),
-          scaffoldBackgroundColor: Color.fromARGB(255, 28, 117, 188),
-          colorScheme: ColorScheme.fromSeed(
-              seedColor: const Color.fromARGB(255, 255, 255, 255)),
-          useMaterial3: true,
-        ),
-        home: const EvchargingPage());
+        theme: myTheme(),
+        initialRoute: '/',
+        routes: {
+          '/': (context) => AboutPage(),
+          '/welcomePage': (context) => WelcomePage(),
+          '/evchargingPage': (context) => EvchargingPage(),
+          '/displayPage': (context) => DisplayPage(),
+        },
+        );// home: const AboutPage());
   }
 }
