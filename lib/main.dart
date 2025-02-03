@@ -2,8 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/about_page.dart';
+import 'package:flutter_application_1/detail_page.dart';
 import 'package:flutter_application_1/display_page.dart';
 import 'package:flutter_application_1/my_theme.dart';
+import 'package:flutter_application_1/mylist_page.dart';
 import 'evcharging_page.dart';
 import 'welcome_page.dart';
 
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
         theme: myTheme(),
         initialRoute: '/',
         routes: {
-          '/': (context) => AboutPage(),
+          '/': (context) => const MyListPage(),
           '/welcomePage': (context) => WelcomePage(),
           '/evchargingPage': (context) => EvchargingPage(),
           '/displayPage': (context) => DisplayPage(),
